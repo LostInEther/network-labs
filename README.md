@@ -7,10 +7,10 @@ Every lab runs on a single Linux machine using network namespaces, so there are 
 ## Requirements
 
 ```bash
-sudo apt install -y iproute2 iptables tcpdump curl python3 ethtool iputils-ping iputils-tracepath
+sudo apt install -y iproute2 iptables tcpdump curl python3 ethtool iputils-ping iputils-tracepath dnsmasq-base dnsutils
 ```
 
-WSL 1 doesn't support network namespaces. Check with `wsl -l -v` in PowerShell and make sure your distro shows version 2.
+On Windows, use WSL 2. WSL 1 doesn't support network namespaces, so check your version with `wsl -l -v` in PowerShell.
 
 ## Labs
 
@@ -18,6 +18,7 @@ WSL 1 doesn't support network namespaces. Check with `wsl -l -v` in PowerShell a
 | --- | --- | --- |
 | [tcp-handshake](tcp-handshake/) | A three-node lab for breaking the TCP handshake three ways: closed port, silent drop and lost SYN-ACK | [Diagnosing a Failed TCP Handshake in Wireshark](https://josephoshaughnessy.hashnode.dev/tcp-handshake-wireshark) |
 | [mtu-black-hole](mtu-black-hole/) | A four-node lab with a 1400-byte link in the middle, for reproducing and fixing a Path MTU Discovery black hole | [Finding an MTU Black Hole with ping, tcpdump and Wireshark](https://josephoshaughnessy.hashnode.dev/mtu-black-hole) |
+| [dns-failures](dns-failures/) | A client, a router and a dnsmasq server, for breaking DNS five ways: bad answers, silent drops, rejects, blocked TCP 53 and the wrong resolver | [Diagnosing DNS Failures with dig and tcpdump](https://josephoshaughnessy.hashnode.dev/dns-failures-dig-tcpdump) |
 
 ## Usage
 
