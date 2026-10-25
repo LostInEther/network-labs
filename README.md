@@ -18,6 +18,7 @@ On Windows, use WSL 2. WSL 1 doesn't support network namespaces, so check your v
 | --- | --- | --- |
 | [tcp-handshake](tcp-handshake/) | A three-node lab for breaking the TCP handshake three ways: closed port, silent drop and lost SYN-ACK | [Diagnosing a Failed TCP Handshake in Wireshark](https://josephoshaughnessy.hashnode.dev/tcp-handshake-wireshark) |
 | [mtu-black-hole](mtu-black-hole/) | A four-node lab with a 1400-byte link in the middle, for reproducing and fixing a Path MTU Discovery black hole | [Finding an MTU Black Hole with ping, tcpdump and Wireshark](https://josephoshaughnessy.hashnode.dev/mtu-black-hole) |
+| [tcp-data-phase](tcp-data-phase/) | A 50 Mbit/s link with a sender and receiver, for reading packet loss (dup ACKs, fast retransmits) and zero windows in Wireshark | [After the Handshake: Retransmissions and Zero Windows in Wireshark](https://josephoshaughnessy.hashnode.dev/tcp-retransmissions-zero-window) |
 | [dns-failures](dns-failures/) | A client, a router and a dnsmasq server, for breaking DNS five ways: bad answers, silent drops, rejects, blocked TCP 53 and the wrong resolver | [Diagnosing DNS Failures with dig and tcpdump](https://josephoshaughnessy.hashnode.dev/dns-failures-dig-tcpdump) |
 
 ## Usage
